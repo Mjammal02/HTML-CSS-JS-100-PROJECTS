@@ -1,0 +1,79 @@
+/* Reset styles */
+* {
+    padding: 0; /* Sätter alla elementers padding till 0, vilket tar bort standardmarginalerna */
+    margin: 0; /* Sätter alla elementers marginaler till 0 */
+    box-sizing: border-box; /* Ser till att elementets totala bredd och höjd inkluderar padding och gränser, vilket gör layouthanteringen mer förutsägbar */
+    font-family: sans-serif; /* Sätter en fallback-font till sans-serif för alla textelement */
+}
+
+/* Stilmall för hero-sektionen */
+.hero {
+    width: 100%; /* Ger hero-sektionen en bredd på 100% av förälderns bredd */
+    height: 100vh; /* Ger hero-sektionen en höjd på 100% av fönsterhöjden */
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)); /* Skapar en bakgrundsbild som en linjär gradient med en viss grad av genomskinlighet */
+    position: relative; /* Sätter positionen för hero-sektionen till relativ för att innehåll ska kunna positioneras relativt till det */
+    padding: 0 5%; /* Ger en liten inre utfyllnad på vänster och höger sida av hero-sektionen */
+    display: flex; /* Sätter displaytypen till flex för att kunna använda flexbox-egenskaper */
+    justify-content: center; /* Centrerar flexbarnen horisontellt */
+    align-items: center; /* Centrerar flexbarnen vertikalt */
+}
+
+/* Stilmall för innehållet inuti hero-sektionen */
+.content {
+    text-align: center; /* Centrerar innehållet horisontellt */
+}
+
+/* Stilmall för rubriken inuti hero-sektionen */
+.content h1 {
+    font-size: 160px; /* Sätter storleken på rubriken till 160 pixlar */
+    color: #fff; /* Sätter textfärgen till vit */
+    font-weight: 600; /* Sätter fetstil för rubriken */
+    transition: 0.5s; /* Lägger till en övergångseffekt på 0.5 sekunder för smidig ändring av egenskaper */
+}
+
+/* Hover-effekt för rubriken */
+.content h1:hover {
+    -webkit-text-stroke: 2px white; /* Lägger till en vit kant runt texten på webbläsare som stöder -webkit-text-stroke */
+    color: transparent; /* Gör texten genomskinlig när den hovras över */
+}
+
+/* Stilmall för länken inuti hero-sektionen */
+.content a {
+    text-decoration: none; /* Tar bort understrykning från länken */
+    display: inline-block; /* Gör länken till en blocknivå-element, vilket gör den möjlig att ställa in bredd och höjd */
+    color: #fff; /* Sätter textfärgen till vit */
+    font-size: 24px; /* Sätter storleken på texten till 24 pixlar */
+    border: 2px solid white; /* Ger länken en vit ram */
+    padding: 14px 50px; /* Ger länken en inre utfyllnad */
+    margin-top: 20px; /* Ger länken en marginal på 20 pixlar överst */
+    transition: 0.5s; /* Lägger till en övergångseffekt på 0.5 sekunder för smidig ändring av egenskaper */
+}
+
+/* Hover-effekt för länken */
+.content a:hover {
+    background: #fff; /* Ändrar bakgrundsfärgen till vit */
+    color: #000; /* Ändrar textfärgen till svart */
+}
+
+/* Stilmall för bakgrundsvideot */
+.back-video {
+    position: absolute; /* Sätter positionen för videon till absolut, vilket placeras utanför den normala flödet och kan positioneras var som helst */
+    right: 0; /* Placerar videon längst till höger i dess överordnade element */
+    bottom: 0; /* Placerar videon längst ner i dess överordnade element */
+    z-index: -1; /* Sätter staplingsordningen för videon bakom andra element */
+}
+
+/* Media Query för att hantera aspektratio av videon */
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%; /* Sätter videons bredd till 100% av dess förälders bredd */
+        height: auto; /* Anpassar videons höjd automatiskt för att behålla dess aspektratio */
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto; /* Anpassar videons bredd automatiskt för att behålla dess aspektratio */
+        height: 100%; /* Sätter videons höjd till 100% av dess förälders höjd */
+    }
+}
