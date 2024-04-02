@@ -1,36 +1,37 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-
-
-    
-}
-
-body{
-    background: red;
-}
-
-.card{
-    width: 700px;
-    background: #ccc;
-    padding: 20px; 
-    margin: 20px;
-    font-family: sans-serif;
-    line-height: 28px;
-}
-
-
-/*Scrollbar */
-
-::-webkit-scrollbar{
-    background-color:transparent;
-    width: 30px;
-    border: 2px dashed white;
-}
-
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(#21d4fd, #b721ff);
-    border-radius: 100px;
-}
+/* Resetting default styles for all elements */
+* {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: sans-serif; /* Set default font family */
+  }
+  
+  /* Styling for the body */
+  body {
+    background: red; /* Set background color to red */
+  }
+  
+  /* Styling for the card */
+  .card {
+    width: 700px; /* Set width */
+    background: #ccc; /* Set background color */
+    padding: 20px; /* Add padding */
+    margin: 20px; /* Add margin */
+    font-family: sans-serif; /* Set font family */
+    line-height: 28px; /* Set line height */
+  }
+  
+  /* Styling for the scrollbar */
+  /* Customize scrollbar track */
+  ::-webkit-scrollbar {
+    background-color: transparent; /* Set background color to transparent */
+    width: 30px; /* Set width */
+    border: 2px dashed white; /* Add border */
+  }
+  
+  /* Customize scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#21d4fd, #b721ff); /* Set background gradient */
+    border-radius: 100px; /* Add border radius */
+  }
+  

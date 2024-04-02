@@ -1,54 +1,62 @@
+/* Styling for the body */
 body {
-    margin: 0;
-    padding: 0;
-    background: #555;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    background: #222;
-  }
-  
-  .clip {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s;
-  }
-  
-  .clip1 {
-    background: url(https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%);
-  }
-  
-  .clip2 {
-    background: url(https://images.unsplash.com/photo-1502228213426-d4e9f2add0e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
-  }
-  
-  .clip3 {
-    background: url(https://images.unsplash.com/photo-1519757043093-285fcb07a4e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
-  }
-  
-  .container:hover .clip {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  }
-  
-  .container .clip:hover {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background: #555; /* Set background color */
+  height: 100vh; /* Set height to viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Styling for the container */
+.container {
+  position: relative; /* Set position to relative for absolute positioning */
+  width: 800px; /* Set width */
+  height: 500px; /* Set height */
+  background: #222; /* Set background color */
+}
+
+/* Styling for the clipping elements */
+.clip {
+  position: absolute; /* Set position to absolute for precise placement */
+  top: 0; /* Align to top of container */
+  left: 0; /* Align to left of container */
+  width: 100%; /* Occupy full width of container */
+  height: 100%; /* Occupy full height of container */
+  transition: all 0.5s; /* Add transition effect for smooth changes */
+}
+
+/* Styling for the first clipping element */
+.clip1 {
+  background: url(https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80); /* Set background image */
+  background-size: cover; /* Scale background image to cover container */
+  background-position: center; /* Center background image */
+  clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%); /* Define clip path */
+}
+
+/* Styling for the second clipping element */
+.clip2 {
+  background: url(https://images.unsplash.com/photo-1502228213426-d4e9f2add0e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80); /* Set background image */
+  background-size: cover; /* Scale background image to cover container */
+  background-position: center; /* Center background image */
+  clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%); /* Define clip path */
+}
+
+/* Styling for the third clipping element */
+.clip3 {
+  background: url(https://images.unsplash.com/photo-1519757043093-285fcb07a4e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80); /* Set background image */
+  background-size: cover; /* Scale background image to cover container */
+  background-position: center; /* Center background image */
+  clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%); /* Define clip path */
+}
+
+/* Transition for clip path on hover */
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+/* Transition for clip path on clip hover */
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
